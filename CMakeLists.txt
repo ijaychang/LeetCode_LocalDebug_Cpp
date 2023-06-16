@@ -9,4 +9,4 @@ LINK_LIBRARIES(leetcode)
 
 
 add_executable(1-two-sum leetcode/editor/cn/1-two-sum.cpp)
-add_executable(100-same-tree leetcode/editor/cn/100-same-tree.cpp)
+add_executable(94-binary-tree-inorder-traversal leetcode/editor/cn/94-binary-tree-inorder-traversal.cpp)

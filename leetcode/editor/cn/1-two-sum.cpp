@@ -21,17 +21,17 @@ using namespace std;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
+    vector<int> twoSum(vector<int> &nums, int target) {
         unordered_map<int, int> map;
         vector<int> result;
-        for(int i =0;i<nums.size();i++){
-            int complement = target-nums[i];
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i];
 
-            if(map.find(complement)!=map.end()){
-                result={map[complement],i};
+            if (map.find(complement) != map.end()) {
+                result = {map[complement], i};
                 break;
             }
-            map[nums[i]]=i;
+            map[nums[i]] = i;
         }
 
         return result;
@@ -40,12 +40,11 @@ public:
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main()
-{
+int main() {
     Solution s;
     vector<int> data{7, 1, 5, 3, 6, 4};
     //vector<int> ans = s.twoSum(data,11);
     //cout << ans[0]<<ans[1]<<endl;
-    auto res = s.twoSum(data,12);
-    cout<<res[0]<<endl<<res[1]<<endl;
+    auto res = s.twoSum(data, 12);
+    cout << res[0] << endl << res[1] << endl;
 }
