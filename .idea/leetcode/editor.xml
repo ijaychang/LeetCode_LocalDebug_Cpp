@@ -83,6 +83,22 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/144-binary-tree-preorder-traversal.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/144-binary-tree-preorder-traversal.cpp" />
+              <option name="questionId" value="144" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/145-binary-tree-postorder-traversal.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/145-binary-tree-postorder-traversal.cpp" />
+              <option name="questionId" value="145" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/17-letter-combinations-of-a-phone-number.cpp">
           <value>
             <LeetcodeEditor>
