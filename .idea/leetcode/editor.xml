@@ -219,6 +219,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/95-unique-binary-search-trees-ii.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/95-unique-binary-search-trees-ii.cpp" />
+              <option name="questionId" value="95" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/leetcode/editor/cn/102-binary-tree-level-order-traversal.cpp">
           <value>
             <LeetcodeEditor>
