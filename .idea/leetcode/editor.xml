@@ -59,6 +59,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/102-binary-tree-level-order-traversal.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/102-binary-tree-level-order-traversal.cpp" />
+              <option name="questionId" value="102" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/121-best-time-to-buy-and-sell-stock.cpp">
           <value>
             <LeetcodeEditor>
