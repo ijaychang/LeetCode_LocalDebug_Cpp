@@ -36,7 +36,7 @@ using namespace std;
  */
 class Solution {
 public:
-    // 方法一： 递归法（DFS深度优先）
+    // 方法一： DFS深度优先
 //    int maxDepth(TreeNode *root) {
 //        if (!root) {
 //            return 0;

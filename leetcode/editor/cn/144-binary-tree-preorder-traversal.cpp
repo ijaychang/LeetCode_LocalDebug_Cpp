@@ -87,29 +87,48 @@ public:
 //        doPreorderTraversal(root->right, res);
 //    }
 
-
-
-//   方法二：迭代法
+//   方法一：递归法(补充解法)
     vector<int> preorderTraversal(TreeNode *root) {
         if (!root) {
             return {};
         }
         vector<int> res;
-        stack<TreeNode *> s;
-        for (s.push(root); !s.empty();) {
-            TreeNode *cur = s.top();
-            s.pop();
-            res.push_back(cur->val);
-            if (cur->right) {
-                s.push(cur->right);
-            }
-
-            if (cur->left) {
-                s.push(cur->left);
-            }
+        res.push_back(root->val);
+        vector<int> leftRes = preorderTraversal(root->left);
+        vector<int> rightRes = preorderTraversal(root->right);
+        if (leftRes.size() > 0) {
+            res.insert(res.end(),leftRes.begin(),leftRes.end());
+        }
+        if (rightRes.size() > 0) {
+            res.insert(res.end(),rightRes.begin(),rightRes.end());
         }
         return res;
     }
+
+
+
+//   方法二：迭代法
+//    vector<int> preorderTraversal(TreeNode *root) {
+//        if (!root) {
+//            return {};
+//        }
+//        vector<int> res;
+//        stack<TreeNode *> s;
+//        for (s.push(root); !s.empty();) {
+//            TreeNode *cur = s.top();
+//            s.pop();
+//            res.push_back(cur->val);
+//            if (cur->right) {
+//                s.push(cur->right);
+//            }
+//
+//            if (cur->left) {
+//                s.push(cur->left);
+//            }
+//        }
+//        return res;
+//    }
+// }
 
 };
 

@@ -84,6 +84,7 @@ public:
         stack<TreeNode *> s;
         TreeNode *cur;
         for (cur = root; cur || !s.empty();) {
+            // 找最左侧的叶子节点
             for (; cur; cur = cur->left) {
                 s.push(cur);
             }
