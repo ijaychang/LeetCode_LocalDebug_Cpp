@@ -53,30 +53,61 @@ using namespace std;
  */
 class Solution {
 public:
+//    vector<vector<int>> levelOrder(TreeNode *root) {
+//        vector<vector<int>> res;
+//        if (!root) {
+//            return res;
+//        }
+//        queue<TreeNode *> q;
+//        TreeNode *node;
+//        for (q.push(root); !q.empty();) {
+//            res.push_back(vector<int>());
+//            int currentLevelSize = q.size();
+//            for (int count = 0; !q.empty() && count < currentLevelSize; count++) {
+//                node = q.front();
+//                q.pop();
+//                res.back().push_back(node->val);
+//                if (node->left) {
+//                    q.push(node->left);
+//                }
+//                if (node->right) {
+//                    q.push(node->right);
+//                }
+//            }
+//        }
+//        return res;
+//
+//    }
+
     vector<vector<int>> levelOrder(TreeNode *root) {
-        vector<vector<int>> res;
         if (!root) {
-            return res;
+            return {};
         }
-        queue<TreeNode *> q;
-        TreeNode *node;
-        for (q.push(root); !q.empty();) {
-            res.push_back(vector<int>());
-            int currentLevelSize = q.size();
-            for (int count = 0; !q.empty() && count < currentLevelSize; count++) {
-                node = q.front();
-                q.pop();
-                res.back().push_back(node->val);
-                if (node->left) {
-                    q.push(node->left);
-                }
-                if (node->right) {
-                    q.push(node->right);
-                }
+        vector<vector<int>> res;
+        queue<TreeNode *> currentLevelNodes;
+        currentLevelNodes.push(root);
+        traverse(currentLevelNodes, res);
+        return res;
+    }
+
+    void traverse(queue<TreeNode *> &currentLevelNodes, vector<vector<int>> &res) {
+        if (currentLevelNodes.empty()) {
+            return;
+        }
+        queue<TreeNode *> nextLevelNodes;
+        res.push_back(vector<int>());
+        for (TreeNode *p; !currentLevelNodes.empty();) {
+            p = currentLevelNodes.front();
+            currentLevelNodes.pop();
+            res.back().push_back(p->val);
+            if (p->left) {
+                nextLevelNodes.push(p->left);
+            }
+            if (p->right) {
+                nextLevelNodes.push(p->right);
             }
         }
-        return res;
-
+        traverse(nextLevelNodes, res);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)

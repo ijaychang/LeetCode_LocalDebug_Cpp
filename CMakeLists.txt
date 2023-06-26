@@ -16,3 +16,6 @@ add_executable(102-binary-tree-level-order-traversal leetcode/editor/cn/102-bina
 add_executable(104-maximum-depth-of-binary-tree leetcode/editor/cn/104-maximum-depth-of-binary-tree.cpp)
 add_executable(101-symmetric-tree leetcode/editor/cn/101-symmetric-tree.cpp)
 add_executable(230-kth-smallest-element-in-a-bst leetcode/editor/cn/230-kth-smallest-element-in-a-bst.cpp)
+add_executable(00-count-bitree-node-num leetcode/editor/cn/00-count-bitree-node-num.cpp)
+add_executable(111-minimum-depth-of-binary-tree leetcode/editor/cn/111-minimum-depth-of-binary-tree.cpp)
+add_executable(752-open-the-lock leetcode/editor/cn/752-open-the-lock.cpp)
