@@ -85,39 +85,88 @@ public:
         return res;
     }
 
-    int openLock(vector<string> &deadends, string target) {
-        unordered_set<string> deadendsSet;
-        for (string deadend: deadends) {
-            deadendsSet.insert(deadend);
+    vector<string> generate(string s) {
+        vector<string> res;
+        for (int pos = 0; pos < 4; pos++) {
+            res.push_back(plusOne(s, pos));
+            res.push_back(minusOne(s, pos));
         }
-        queue<string> q;
+        return res;
+    }
+
+    // 方法一： 单向BFS
+//    int openLock(vector<string> &deadends, string target) {
+//        unordered_set<string> deadendsSet;
+//        for (string deadend: deadends) {
+//            deadendsSet.insert(deadend);
+//        }
+//        queue<string> q;
+//        unordered_set<string> visited;
+//        int sz = 0, step = 0;
+//        string cur;
+//        for (q.push("0000"), visited.insert("0000"); !q.empty();) {
+//            sz = q.size();
+//            for (int i = 0; i < sz; i++) {
+//                cur = q.front();
+//                q.pop();
+//                // 找到目标值，马上返回step
+//                if (cur.compare(target) == 0) {
+//                    return step;
+//                }
+//                if (deadendsSet.count(cur)) {
+//                    continue;
+//                }
+//                vector<string> possibleValues = generate(cur);
+//                for (string possibleValue : possibleValues) {
+//                    if (!visited.count(possibleValue)) {
+//                        q.push(possibleValue);
+//                        visited.insert(possibleValue);
+//                    }
+//                }
+//            }
+//            step++;
+//        }
+//        return -1;
+//    }
+
+    void print(unordered_set<string> us) {
+        for (string s : us) {
+            cout << s << "," << ends;
+        }
+        cout << " " << ends;
+    }
+
+    // 方法二：双向BFS
+    int openLock(vector<string> &deadends, string target) {
+        unordered_set<string> deads(deadends.begin(), deadends.end());
+        unordered_set<string> q1, q2;
         unordered_set<string> visited;
-        int sz = 0, step = 0;
-        string cur;
-        for (q.push("0000"), visited.insert("0000"); !q.empty();) {
-            sz = q.size();
-            for (int i = 0; i < sz; i++) {
-                cur = q.front();
-                q.pop();
-                if (cur.compare(target) == 0) {
-                    return step;
-                }
-                if (deadendsSet.count(cur)) {
+        int step = 0;
+        q1.insert("0000");
+        q2.insert(target);
+        visited.insert("0000");
+        for (; !q1.empty() && !q2.empty();) {
+            unordered_set<string> temp;
+            for (string cur : q1) {
+                if (deads.count(cur)) {
                     continue;
                 }
-                for (int pos = 0; pos < 4; pos++) {
-                    string tmp = plusOne(cur, pos);
-                    if (!visited.count(tmp)) {
-                        q.push(tmp);
-                        visited.insert(tmp);
-                    }
-                    tmp = minusOne(cur, pos);
-                    if (!visited.count(tmp)) {
-                        q.push(tmp);
-                        visited.insert(tmp);
+                if (q2.count(cur)) {
+                    return step;
+                }
+                // visited的更新是滞后于temp的更新的。这也是为何visited的位置相较于原始BFS算法不同的原因。
+                visited.insert(cur);
+                for (string s :generate(cur)) {
+                    // temp里的元素需要是未曾访问过的元素
+                    if (!visited.count(s)) {
+                        temp.insert(s);
                     }
                 }
             }
+
+            // q1,q2交替进行某个方向BFS
+            q1 = q2;
+            q2 = temp;
 
             step++;
         }
@@ -130,11 +179,11 @@ public:
 
 int main() {
     Solution s;
-//    vector<string> deadends = {"0201", "0101", "0102", "1212", "2002"};
-//    string target = "0202";
+    vector<string> deadends = {};
+    string target = "9200";
 
-    vector<string> deadends = {"8887", "8889", "8878", "8898", "8788", "8988", "7888", "9888"};
-    string target = "8888";
+//    vector<string> deadends = {"8887", "8889", "8878", "8898", "8788", "8988", "7888", "9888"};
+//    string target = "8888";
 
     int res = s.openLock(deadends, target);
     cout << res << endl;
