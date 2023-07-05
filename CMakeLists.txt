@@ -20,3 +20,4 @@ add_executable(00-count-bitree-node-num leetcode/editor/cn/00-count-bitree-node-
 add_executable(111-minimum-depth-of-binary-tree leetcode/editor/cn/111-minimum-depth-of-binary-tree.cpp)
 add_executable(752-open-the-lock leetcode/editor/cn/752-open-the-lock.cpp)
 add_executable(322-coin-change leetcode/editor/cn/322-coin-change.cpp)
+add_executable(300-longest-increasing-subsequence leetcode/editor/cn/300-longest-increasing-subsequence.cpp)
