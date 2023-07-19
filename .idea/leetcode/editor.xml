@@ -59,6 +59,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/1008-construct-binary-search-tree-from-preorder-traversal.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/1008-construct-binary-search-tree-from-preorder-traversal.cpp" />
+              <option name="questionId" value="1050" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/101-symmetric-tree.cpp">
           <value>
             <LeetcodeEditor>
@@ -80,6 +88,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/104-maximum-depth-of-binary-tree.cpp" />
               <option name="questionId" value="104" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/105-construct-binary-tree-from-preorder-and-inorder-traversal.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/105-construct-binary-tree-from-preorder-and-inorder-traversal.cpp" />
+              <option name="questionId" value="105" />
             </LeetcodeEditor>
           </value>
         </entry>

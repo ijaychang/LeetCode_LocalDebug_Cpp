@@ -26,3 +26,4 @@ add_executable(000-binary-tree-traverse-template leetcode/editor/cn/000-binary-t
 add_executable(000-n-ary-tree-traverse-template leetcode/editor/cn/000-n-ary-tree-traverse-template.cpp)
 add_executable(000-binary-tree-level-traverse-template leetcode/editor/cn/000-binary-tree-level-traverse-template-01.cpp)
 add_executable(000-binary-tree-level-traverse-template-02 leetcode/editor/cn/000-binary-tree-level-traverse-template-02.cpp)
+add_executable(1008-construct-binary-search-tree-from-preorder-traversal leetcode/editor/cn/1008-construct-binary-search-tree-from-preorder-traversal.cpp)
