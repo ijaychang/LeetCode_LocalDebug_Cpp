@@ -90,6 +90,7 @@ namespace LeetCode {
         root_ptrs.push(temp);
         while (!in.empty()) {
             temp = root_ptrs.front();
+            // 元素0表示null
             if (in.front() == 0)
                 temp->left = nullptr;
             else
@@ -97,6 +98,7 @@ namespace LeetCode {
             in.pop();
             if (in.empty())
                 break;
+            // 元素0表示null
             if (in.front() == 0)
                 temp->right = nullptr;
             else

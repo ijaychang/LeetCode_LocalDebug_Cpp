@@ -79,7 +79,7 @@ namespace LeetCode {
     void delete_root_helper(NTreeNode *root) {
         if (root == nullptr)
             return;
-        vector<NTreeNode *> p_children = root->children;
+        std::vector<NTreeNode *> p_children = root->children;
         delete root;
         root = nullptr;
         if (p_children.empty()) {
