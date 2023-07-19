@@ -24,4 +24,5 @@ add_executable(300-longest-increasing-subsequence leetcode/editor/cn/300-longest
 add_executable(543-diameter-of-binary-tree leetcode/editor/cn/543-diameter-of-binary-tree.cpp)
 add_executable(000-binary-tree-traverse-template leetcode/editor/cn/000-binary-tree-traverse-template.cpp)
 add_executable(000-n-ary-tree-traverse-template leetcode/editor/cn/000-n-ary-tree-traverse-template.cpp)
-add_executable(000-binary-tree-level-traverse-template leetcode/editor/cn/000-binary-tree-level-traverse-template.cpp)
+add_executable(000-binary-tree-level-traverse-template leetcode/editor/cn/000-binary-tree-level-traverse-template-01.cpp)
+add_executable(000-binary-tree-level-traverse-template-02 leetcode/editor/cn/000-binary-tree-level-traverse-template-02.cpp)
