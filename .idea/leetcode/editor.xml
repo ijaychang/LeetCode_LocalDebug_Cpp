@@ -267,6 +267,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/543-diameter-of-binary-tree.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/543-diameter-of-binary-tree.cpp" />
+              <option name="questionId" value="543" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/714-best-time-to-buy-and-sell-stock-with-transaction-fee.cpp">
           <value>
             <LeetcodeEditor>

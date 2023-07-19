@@ -38,6 +38,7 @@
 // listnode
 #include "listnode.h"
 #include "btree.h"
+#include "ntree.h"
 
 using namespace std;
 using namespace LeetCode;
