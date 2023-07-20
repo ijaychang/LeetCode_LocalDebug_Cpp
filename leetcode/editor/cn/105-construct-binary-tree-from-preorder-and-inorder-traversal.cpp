@@ -54,40 +54,58 @@ class Solution {
 public:
     TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
         if (preorder.empty() || inorder.empty()) {
-            return null;
+            return nullptr;
         }
         unordered_map<int, int> inMap;
         int index = 0;
+        // inMap记录inorder集合每个元素值对应的索引
         for (auto i = inorder.begin(); i < inorder.end(); i++, index++) {
-            inMap.insert((*i, index));
+            inMap.insert(make_pair(*i, index));
         }
-        return doBuildTree(preorder, inorder, 0, preorder.size() - 1, inorder, 0, inorder.size() - 1, inMap);
+        return doBuildTree(preorder, 0, preorder.size(), inorder, 0, inorder.size(), inMap);
     }
 
-    TreeNode *doBuildTree(vector<int> &preorder, int preStart, int preEnd, vector<int> &inorder int inStart, int inEnd,
+    /**
+     *
+     * @param preorder 前序集合
+     * @param preStart 前序集合开始索引值(闭区间)
+     * @param preEnd 前序集合结束索引值(开区间)
+     * @param inorder 中序集合
+     * @param inStart 中序集合开始索引值(闭区间)
+     * @param inEnd  中序集合结束索引值(开区间)
+     * @param inMap 中序值,索引值map
+     * @return
+     */
+    TreeNode *doBuildTree(vector<int> &preorder, int preStart, int preEnd, vector<int> &inorder, int inStart, int inEnd,
                           unordered_map<int, int> &inMap) {
         if (preStart >= preEnd) {
-            return;
+            return nullptr;
         }
-        // preStart指向的元素为根节点
+        // preStart指向的元素为根节点,rootVal为根节点的值
         int rootVal = preorder.at(preStart);
         // 创建根节点
         TreeNode *root = new TreeNode(rootVal);
 
-        // 从inorder找左子树，右子树
-        int indexOfRoot = inMap.at(rootVal);
+        // 从inorder可以得到左子树节点数量，右子树节点数量，inRootIndex为在中序inorder集合的索引值
+        int inRootIndex = inMap.at(rootVal);
         // 左子树节点数量，右子树节点数量
-        int nodeNumOfLeftTree = indexOfRoot - inStart;
-        int nodeNumOfRightTree = inEnd - indexOfRoot;
-        // 创建左子树
-        TreeNode *leftRoot = doBuildTree(preorder, preStart + 1, preStart + nodeNumOfLeftTree, inorder, inStart,
-                                         inStart + nodeNumOfLeftTree, inMap);
+        int nodeNumOfLeftTree = inRootIndex - inStart;
+        int nodeNumOfRightTree = inEnd - inRootIndex - 1;
+        // 判断有没有左子树，有则创建左子树
+        TreeNode *leftRoot = nullptr, *rightRoot = nullptr;
+        if (nodeNumOfLeftTree > 0) {
+            leftRoot = doBuildTree(preorder, preStart + 1, preStart + 1 + nodeNumOfLeftTree, inorder,
+                                   inRootIndex - nodeNumOfLeftTree,
+                                   inRootIndex, inMap);
+        }
+        // 判断有没有右子树，有则创建右子树
+        if (nodeNumOfRightTree > 0) {
 
-        // 创建右子树
-        TreeNode *rightRoot = doBuildTree(preorder, preStart + nodeNumOfLeftTree + 1,
-                                          preStart + nodeNumOfLeftTree + nodeNumOfRightTree, inorder, indexOfRoot + 1,
-                                          inEnd);
-
+            rightRoot = doBuildTree(preorder, preStart + nodeNumOfLeftTree + 1,
+                                    preStart + nodeNumOfLeftTree + nodeNumOfRightTree + 1, inorder,
+                                    inRootIndex + 1,
+                                    inEnd, inMap);
+        }
         // 设置根节点的左子树
         root->left = leftRoot;
         // 设置根节点的右子树
@@ -104,4 +122,6 @@ int main() {
     // 输入: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
     vector<int> preorder = {3, 9, 20, 15, 7};
     vector<int> inorder = {9, 3, 15, 20, 7};
+    TreeNode *root = s.buildTree(preorder, inorder);
+    print_tree(root);
 }
