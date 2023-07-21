@@ -166,48 +166,71 @@ public:
 //        return max_val;
 //    }
 
+//    迭代法
+//    int maxAncestorDiff(TreeNode *root) {
+//        if (!root) {
+//            return {};
+//        }
+//        stack<TreeNode *> s;
+//        TreeNode *pre, *cur = root;
+//        vector<int> track;
+//        int res = INT32_MIN;
+//
+//        while (cur || !s.empty()) {
+//            while (cur) {
+//                s.push(cur);
+//                track.push_back(cur->val);
+//                cur = cur->left;
+//            }
+//            cur = s.top();
+//            // 没有右子树，或右子树已经访问过了
+//            if (!cur->right || cur->right == pre) {
+//
+//                // 左右子树都没有，说明是访问到叶子节点了
+//                if (!cur->left && !cur->right) {
+//                    // 从根节点到叶子节点的一条路径
+//                    int mi = track[0], ma = track[0];
+//                    for (int i = 0; i < track.size(); i++) {
+//                        mi = min(mi, track[i]);
+//                        ma = max(ma, track[i]);
+//                    }
+//                    res = max(res, abs(ma - mi));
+//                }
+//
+//                pre = cur;
+//                // 这里将cur置为null，防止节点(有左子树的节点)被重复访问
+//                cur = nullptr;
+//                // 访问完叶子节点，或右子树访问过了，那么要将track撤掉尾部1个元素
+//                track.pop_back();
+//                s.pop();
+//            } else {
+//                pre = cur;
+//                cur = cur->right;
+//            }
+//        }
+//        return res;
+//    }
+
+    // 递归法
     int maxAncestorDiff(TreeNode *root) {
-        if (!root) {
-            return {};
-        }
-        stack<TreeNode *> s;
-        TreeNode *pre, *cur = root;
-        vector<int> track;
-        int res = INT32_MIN;
-
-        while (cur || !s.empty()) {
-            while (cur) {
-                s.push(cur);
-                track.push_back(cur->val);
-                cur = cur->left;
-            }
-            cur = s.top();
-            // 没有右子树，或右子树已经访问过了
-            if (!cur->right || cur->right == pre) {
-
-                // 左右子树都没有，说明是访问到叶子节点了
-                if (!cur->left && !cur->right) {
-                    // 从根节点到叶子节点的一条路径
-                    int mi = track[0], ma = track[0];
-                    for (int i = 0; i < track.size(); i++) {
-                        mi = min(mi, track[i]);
-                        ma = max(ma, track[i]);
-                    }
-                    res = max(res, abs(ma - mi));
-                }
-
-                pre = cur;
-                // 这里将cur置为null，防止节点(有左子树的节点)被重复访问
-                cur = nullptr;
-                // 访问完叶子节点，或右子树访问过了，那么要将track撤掉尾部1个元素
-                track.pop_back();
-                s.pop();
-            } else {
-                pre = cur;
-                cur = cur->right;
-            }
-        }
+        int mi = root->val, ma = root->val, res = INT32_MIN;
+        traverse(root, mi, ma, res);
         return res;
+    }
+
+    void traverse(TreeNode *root, int mi, int ma, int &res) {
+        if (!root) {
+            return;
+        }
+        mi = min(mi, root->val);
+        ma = max(ma, root->val);
+        // 是叶子节点
+        if (!root->left && !root->right) {
+            res = max(res, abs(ma - mi));
+            return;
+        }
+        traverse(root->left, mi, ma, res);
+        traverse(root->right, mi, ma, res);
     }
 
 
