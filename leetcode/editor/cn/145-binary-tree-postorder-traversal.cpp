@@ -100,71 +100,67 @@ public:
 //    }
 
 // 方法二：迭代法(标准版)
+//    vector<int> postorderTraversal(TreeNode *root) {
+//        if (!root) {
+//            return {};
+//        }
+//        stack<TreeNode *> s;
+//        vector<int> res;
+//        TreeNode *pre;
+//        TreeNode *cur = root;
+//
+//        for (; cur || !s.empty();) {
+//            for (; cur;) {
+//                s.push(cur);
+//                cur = cur->left;
+//            }
+//            cur = s.top();
+//            s.pop();
+//
+//            // 有右子树且右子树根节点就是刚刚访问过的节点
+//            if (cur->right && cur->right == pre) {
+//                res.push_back(cur->val);
+//                pre = cur;
+//                cur = nullptr;
+//                continue;
+//            }
+//
+//            // 没有右子树
+//            if (!cur->right) {
+//                res.push_back(cur->val);
+//            } else {
+//                // 有右子树且右子树根节点不是刚刚访问过的节点 则把cur压栈
+//                s.push(cur);
+//            }
+//            // 用pre记录访问过的节点
+//            pre = cur;
+//            cur = cur->right;
+//        }
+//
+//        return res;
+//    }
+
+    // 方法二 迭代法(标准版基础上代码简化)
     vector<int> postorderTraversal(TreeNode *root) {
         if (!root) {
             return {};
         }
         stack<TreeNode *> s;
+        TreeNode *pre;
+        TreeNode *cur = root;
         vector<int> res;
-        TreeNode *pre;
-        TreeNode *cur = root;
-
-        for (; cur || !s.empty();) {
-            for (; cur;) {
-                s.push(cur);
-                cur = cur->left;
-            }
-            cur = s.top();
-            s.pop();
-
-            // 有右子树且右子树根节点就是刚刚访问过的节点
-            if (cur->right && cur->right == pre) {
-                res.push_back(cur->val);
-                pre = cur;
-                cur = nullptr;
-                continue;
-            }
-
-            // 没有右子树
-            if (!cur->right) {
-                res.push_back(cur->val);
-            } else {
-                // 有右子树且右子树根节点不是刚刚访问过的节点 则把cur压栈
-                s.push(cur);
-            }
-            // 用pre记录访问过的节点
-            pre = cur;
-            cur = cur->right;
-        }
-
-        return res;
-    }
-
-    // 方法二 迭代法(标准版基础上代码简化)
-    vector<int> postorderTraversal(TreeNode *root) {
-        if (!root) {
-            return 0;
-        }
-        stack<TreeNode *> s;
-        TreeNode *pre;
-        TreeNode *cur = root;
-        int res = 0, val = 0;
 
         while (cur || !s.empty()) {
             while (cur) {
                 s.push(cur);
-                val = (val << 1) | cur->val;
                 cur = cur->left;
             }
             cur = s.top();
 
             // 没有右子树，或右子树已经访问过了
             if (!cur->right || cur->right == pre) {
+                res.push_back(cur->val);
                 // 左右子树都没有，说明是访问到叶子节点了
-                if (!cur->left && !cur->right) {
-                    res += val;
-                }
-                val = val >> 1;
                 pre = cur;
                 // 这里将cur置为null，防止节点(有左子树的节点)被重复访问
                 cur = nullptr;
@@ -184,7 +180,7 @@ public:
 
 int main() {
     Solution s;
-    auto list = {1, 2, 3, 4, 5};
+    auto list = {1, 2, 3, 4, -1, 6, 7, 8, 9};
     Tree *tree = new Tree(list);
     vector<int> res = s.postorderTraversal(tree->root);
     for (auto i = res.begin(); i < res.end(); i++) {

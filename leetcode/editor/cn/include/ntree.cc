@@ -14,6 +14,8 @@
 #include "ntree.h"
 
 namespace LeetCode {
+    const int NULL_VAL = -1;
+
     void print_tree(NTreeNode *root) {
         using std::cout;
         using std::endl;

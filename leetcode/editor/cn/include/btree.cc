@@ -15,6 +15,7 @@
 #include "btree.h"
 
 namespace LeetCode {
+    const int NULL_VAL = -1;
     /**
      * 先序遍历打印树的节点值
      *
