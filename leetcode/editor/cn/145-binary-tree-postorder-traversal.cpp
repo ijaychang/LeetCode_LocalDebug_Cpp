@@ -146,17 +146,16 @@ public:
             return {};
         }
         stack<TreeNode *> s;
-        TreeNode *pre;
-        TreeNode *cur = root;
+        TreeNode *pre, *cur = root;
         vector<int> res;
 
         while (cur || !s.empty()) {
+            // cur作为子树根节点的最左侧节点
             while (cur) {
                 s.push(cur);
                 cur = cur->left;
             }
             cur = s.top();
-
             // 没有右子树，或右子树已经访问过了
             if (!cur->right || cur->right == pre) {
                 res.push_back(cur->val);
