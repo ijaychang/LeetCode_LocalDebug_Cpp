@@ -28,3 +28,4 @@ add_executable(000-binary-tree-level-traverse-template leetcode/editor/cn/000-bi
 add_executable(000-binary-tree-level-traverse-template-02 leetcode/editor/cn/000-binary-tree-level-traverse-template-02.cpp)
 add_executable(1008-construct-binary-search-tree-from-preorder-traversal leetcode/editor/cn/1008-construct-binary-search-tree-from-preorder-traversal.cpp)
 add_executable(105-construct-binary-tree-from-preorder-and-inorder-traversal leetcode/editor/cn/105-construct-binary-tree-from-preorder-and-inorder-traversal.cpp)
+add_executable(1022-sum-of-root-to-leaf-binary-numbers leetcode/editor/cn/1022-sum-of-root-to-leaf-binary-numbers.cpp)

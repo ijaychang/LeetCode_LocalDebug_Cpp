@@ -22,6 +22,7 @@
 #include <list>
 
 namespace LeetCode {
+    int NULL_VAL = -1;
 
     struct TreeNode {
         int val;

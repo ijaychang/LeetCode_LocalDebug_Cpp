@@ -99,8 +99,8 @@ namespace LeetCode {
         using std::queue;
 
         queue<NTreeNode *> root_ptrs;
-        // 这里0相当于null
-        if (in.empty() || in.front() == 0) {
+        // -1相当于null
+        if (in.empty() || in.front() == NULL_VAL) {
             return nullptr;
         }
         // 创建一个节点

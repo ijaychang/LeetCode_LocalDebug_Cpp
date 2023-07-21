@@ -15,6 +15,11 @@
 #include "btree.h"
 
 namespace LeetCode {
+    /**
+     * 先序遍历打印树的节点值
+     *
+     * @param root
+     */
     void print_tree(TreeNode *root) {
         using std::cout;
         using std::endl;
@@ -82,7 +87,7 @@ namespace LeetCode {
         using std::queue;
 
         queue<TreeNode *> root_ptrs;
-        if (in.empty() || in.front() == 0)
+        if (in.empty() || in.front() == NULL_VAL)
             return nullptr;
         TreeNode *temp = new TreeNode(in.front());
         TreeNode *ret = temp;
@@ -90,16 +95,16 @@ namespace LeetCode {
         root_ptrs.push(temp);
         while (!in.empty()) {
             temp = root_ptrs.front();
-            // 元素0表示null
-            if (in.front() == 0)
+            // 元素-1表示null
+            if (in.front() == NULL_VAL)
                 temp->left = nullptr;
             else
                 temp->left = new TreeNode(in.front());
             in.pop();
             if (in.empty())
                 break;
-            // 元素0表示null
-            if (in.front() == 0)
+            // 元素-1表示null
+            if (in.front() == NULL_VAL)
                 temp->right = nullptr;
             else
                 temp->right = new TreeNode(in.front());

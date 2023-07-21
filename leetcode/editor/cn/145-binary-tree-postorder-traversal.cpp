@@ -140,6 +140,43 @@ public:
         return res;
     }
 
+    // 方法二 迭代法(标准版基础上代码简化)
+    vector<int> postorderTraversal(TreeNode *root) {
+        if (!root) {
+            return 0;
+        }
+        stack<TreeNode *> s;
+        TreeNode *pre;
+        TreeNode *cur = root;
+        int res = 0, val = 0;
+
+        while (cur || !s.empty()) {
+            while (cur) {
+                s.push(cur);
+                val = (val << 1) | cur->val;
+                cur = cur->left;
+            }
+            cur = s.top();
+
+            // 没有右子树，或右子树已经访问过了
+            if (!cur->right || cur->right == pre) {
+                // 左右子树都没有，说明是访问到叶子节点了
+                if (!cur->left && !cur->right) {
+                    res += val;
+                }
+                val = val >> 1;
+                pre = cur;
+                // 这里将cur置为null，防止节点(有左子树的节点)被重复访问
+                cur = nullptr;
+                s.pop();
+            } else {
+                pre = cur;
+                cur = cur->right;
+            }
+        }
+        return res;
+    }
+
 
 };
 //leetcode submit region end(Prohibit modification and deletion)
