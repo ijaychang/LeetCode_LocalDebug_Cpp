@@ -33,3 +33,5 @@ add_executable(1026-maximum-difference-between-node-and-ancestor leetcode/editor
 add_executable(257-binary-tree-paths leetcode/editor/cn/257-binary-tree-paths.cpp)
 add_executable(113-path-sum-ii leetcode/editor/cn/113-path-sum-ii.cpp)
 add_executable(112-path-sum leetcode/editor/cn/112-path-sum.cpp)
+add_executable(114-flatten-binary-tree-to-linked-list leetcode/editor/cn/114-flatten-binary-tree-to-linked-list.cpp)
+add_executable(129-sum-root-to-leaf-numbers leetcode/editor/cn/129-sum-root-to-leaf-numbers.cpp)

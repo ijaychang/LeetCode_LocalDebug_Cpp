@@ -62,8 +62,24 @@ using namespace std;
  */
 class Solution {
 public:
-    void flatten(TreeNode* root) {
+    void flatten(TreeNode *root) {
+        vector<TreeNode *> track;
+        traverse(root, track);
+        TreeNode *p = root;
+        for (int i = 1; i < track.size(); i++) {
+            p->left = nullptr;
+            p->right = track[i];
+            p = p->right;
+        }
+    }
 
+    void traverse(TreeNode *root, vector<TreeNode *> &track) {
+        if (!root) {
+            return;
+        }
+        track.push_back(root);
+        traverse(root->left, track);
+        traverse(root->right, track);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
@@ -71,7 +87,8 @@ public:
 
 int main() {
     Solution s;
-    vector<int> data{7, 1, 5, 3, 6, 4};
-    auto res = "Hello LeetCode";
-    cout<<res<<endl;
+    auto l = {1, 2, 5, 3, 4, -1, 6};
+    Tree *tree = new Tree(l);
+    s.flatten(tree->root);
+    print_tree(tree->root);
 }
