@@ -31,3 +31,5 @@ add_executable(105-construct-binary-tree-from-preorder-and-inorder-traversal lee
 add_executable(1022-sum-of-root-to-leaf-binary-numbers leetcode/editor/cn/1022-sum-of-root-to-leaf-binary-numbers.cpp)
 add_executable(1026-maximum-difference-between-node-and-ancestor leetcode/editor/cn/1026-maximum-difference-between-node-and-ancestor.cpp)
 add_executable(257-binary-tree-paths leetcode/editor/cn/257-binary-tree-paths.cpp)
+add_executable(113-path-sum-ii leetcode/editor/cn/113-path-sum-ii.cpp)
+add_executable(112-path-sum leetcode/editor/cn/112-path-sum.cpp)
