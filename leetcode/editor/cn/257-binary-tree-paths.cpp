@@ -123,51 +123,129 @@ public:
 //    }
 
     // 方法二[后续遍历迭代法]
+//    vector<string> binaryTreePaths(TreeNode *root) {
+//        if (!root) {
+//            return {};
+//        }
+//        stack<TreeNode *> s;
+//        TreeNode *pre, *cur = root;
+//        vector<string> res;
+//        vector<int> track;
+//
+//        while (cur || !s.empty()) {
+//            while (cur) {
+//                s.push(cur);
+//                track.push_back(cur->val);
+//                cur = cur->left;
+//            }
+//            cur = s.top();
+//            // 没有右子树，或右子树已经访问过了
+//            if (!cur->right || cur->right == pre) {
+//
+//                // 左右子树都没有，说明是访问到叶子节点了
+//                if (!cur->left && !cur->right) {
+//                    // 从根节点到叶子节点的一条路径
+//                    string sb = "";
+//                    for (int i = 0; i < track.size(); i++) {
+//                        sb += to_string(track[i]);
+//                        if (i != track.size() - 1) {
+//                            sb += "->";
+//                        }
+//                    }
+//                    res.push_back(sb);
+//                }
+//
+//                pre = cur;
+//                // 这里将cur置为null，防止节点(有左子树的节点)被重复访问
+//                cur = nullptr;
+//                // 访问完叶子节点，或右子树访问过了，那么要将track撤掉尾部1个元素
+//                track.pop_back();
+//                s.pop();
+//            } else {
+//                pre = cur;
+//                cur = cur->right;
+//            }
+//        }
+//        return res;
+//    }
+
+    // 方法三 递归法
+//    vector<string> binaryTreePaths(TreeNode *root) {
+//        vector<string> res;
+//        vector<int> track;
+//        traverse(root, track, res);
+//        return res;
+//    }
+//
+//    void traverse(TreeNode *root, vector<int> &track, vector<string> &res) {
+//        if (!root) {
+//            return;
+//        }
+//        track.push_back(root->val);
+//        // 是叶子节点
+//        if (!root->left && !root->right) {
+//            string sb;
+//            for (int i = 0; i < track.size(); i++) {
+//                sb += (i != track.size() - 1) ? to_string(track[i]) + "->" : to_string(track[i]);
+//            }
+//            res.push_back(sb);
+//            track.pop_back();
+//            return;
+//        }
+//        traverse(root->left, track, res);
+//        traverse(root->right, track, res);
+//        track.pop_back();
+//    }
+
+    // 方法三 递归法改进
     vector<string> binaryTreePaths(TreeNode *root) {
-        if (!root) {
-            return {};
-        }
-        stack<TreeNode *> s;
-        TreeNode *pre, *cur = root;
         vector<string> res;
-        vector<int> track;
-
-        while (cur || !s.empty()) {
-            while (cur) {
-                s.push(cur);
-                track.push_back(cur->val);
-                cur = cur->left;
-            }
-            cur = s.top();
-            // 没有右子树，或右子树已经访问过了
-            if (!cur->right || cur->right == pre) {
-
-                // 左右子树都没有，说明是访问到叶子节点了
-                if (!cur->left && !cur->right) {
-                    // 从根节点到叶子节点的一条路径
-                    string sb = "";
-                    for (int i = 0; i < track.size(); i++) {
-                        sb += to_string(track[i]);
-                        if (i != track.size() - 1) {
-                            sb += "->";
-                        }
-                    }
-                    res.push_back(sb);
-                }
-
-                pre = cur;
-                // 这里将cur置为null，防止节点(有左子树的节点)被重复访问
-                cur = nullptr;
-                // 访问完叶子节点，或右子树访问过了，那么要将track撤掉尾部1个元素
-                track.pop_back();
-                s.pop();
-            } else {
-                pre = cur;
-                cur = cur->right;
-            }
-        }
+        string track = "";
+        traverse(root, track, res);
         return res;
     }
+
+    void traverse(TreeNode *root, string track, vector<string> &res) {
+        if (!root) {
+            return;
+        }
+        track += to_string(root->val);
+        // 是叶子节点
+        if (!root->left && !root->right) {
+            res.push_back(track);
+            return;
+        }
+        track += "->";
+        traverse(root->left, track, res);
+        traverse(root->right, track, res);
+    }
+
+//  官方题解
+//    void construct_paths(TreeNode *root, string path, vector<string> &paths) {
+//        if (!root) {
+//            return;
+//        }
+//        path += to_string(root->val);
+//        // 当前节点是叶子节点
+//        if (!root->left && !root->right) {
+//            // 把路径加入到答案中
+//            paths.push_back(path);
+//            return;
+//        }
+//
+//        // 当前节点不是叶子节点，继续递归遍历
+//        path += "->";
+//        construct_paths(root->left, path, paths);
+//        construct_paths(root->right, path, paths);
+//    }
+//
+//    vector<string> binaryTreePaths(TreeNode *root) {
+//        vector<string> paths;
+//        construct_paths(root, "", paths);
+//        return paths;
+//    }
+
+
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
