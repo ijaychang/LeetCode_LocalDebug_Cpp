@@ -91,6 +91,22 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/1025-divisor-game.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/1025-divisor-game.cpp" />
+              <option name="questionId" value="1086" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/1026-maximum-difference-between-node-and-ancestor.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/1026-maximum-difference-between-node-and-ancestor.cpp" />
+              <option name="questionId" value="1092" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/104-maximum-depth-of-binary-tree.cpp">
           <value>
             <LeetcodeEditor>
@@ -192,6 +208,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/230-kth-smallest-element-in-a-bst.cpp" />
               <option name="questionId" value="230" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/257-binary-tree-paths.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/257-binary-tree-paths.cpp" />
+              <option name="questionId" value="257" />
             </LeetcodeEditor>
           </value>
         </entry>
