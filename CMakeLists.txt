@@ -37,3 +37,4 @@ add_executable(114-flatten-binary-tree-to-linked-list leetcode/editor/cn/114-fla
 add_executable(129-sum-root-to-leaf-numbers leetcode/editor/cn/129-sum-root-to-leaf-numbers.cpp)
 add_executable(124-binary-tree-maximum-path-sum leetcode/editor/cn/124-binary-tree-maximum-path-sum.cpp)
 add_executable(108-convert-sorted-array-to-binary-search-tree leetcode/editor/cn/108-convert-sorted-array-to-binary-search-tree.cpp)
+add_executable(110-balanced-binary-tree leetcode/editor/cn/110-balanced-binary-tree.cpp)
