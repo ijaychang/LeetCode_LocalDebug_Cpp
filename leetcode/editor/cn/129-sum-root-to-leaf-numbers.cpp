@@ -74,22 +74,21 @@ public:
         if (!root) {
             return 0;
         }
-        // ex代表指数
-        int sum = 0, ex = 0, val = 0;
-        traverse(root, val, ex, sum);
+        int sum = 0, val = 0;
+        traverse(root, val, sum);
         return sum;
     }
 
-    void traverse(TreeNode *root, int val, int ex, int &sum) {
+    void traverse(TreeNode *root, int val, int &sum) {
         if (!root) {
             return;
         }
-        val = val * pow(10, ex) + root->val;
+        val = val * 10 + root->val;
         if (!root->left && !root->right) {
             sum += val;
         }
-        traverse(root->left, val, ex + 1, sum);
-        traverse(root->right, val, ex + 1, sum);
+        traverse(root->left, val, sum);
+        traverse(root->right, val, sum);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)
