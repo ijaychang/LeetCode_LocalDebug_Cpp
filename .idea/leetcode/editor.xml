@@ -123,6 +123,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/108-convert-sorted-array-to-binary-search-tree.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/108-convert-sorted-array-to-binary-search-tree.cpp" />
+              <option name="questionId" value="108" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/111-minimum-depth-of-binary-tree.cpp">
           <value>
             <LeetcodeEditor>
@@ -176,6 +184,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/123-best-time-to-buy-and-sell-stock-iii.cpp" />
               <option name="questionId" value="123" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/124-binary-tree-maximum-path-sum.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/124-binary-tree-maximum-path-sum.cpp" />
+              <option name="questionId" value="124" />
             </LeetcodeEditor>
           </value>
         </entry>
