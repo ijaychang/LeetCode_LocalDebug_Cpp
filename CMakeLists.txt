@@ -43,3 +43,5 @@ add_executable(1261-find-elements-in-a-contaminated-binary-tree leetcode/editor/
 add_executable(1315-sum-of-nodes-with-even-valued-grandparent leetcode/editor/cn/1315-sum-of-nodes-with-even-valued-grandparent.cpp)
 add_executable(1325-delete-leaves-with-a-given-value leetcode/editor/cn/1325-delete-leaves-with-a-given-value.cpp)
 add_executable(226-invert-binary-tree leetcode/editor/cn/226-invert-binary-tree.cpp)
+add_executable(25-reverse-nodes-in-k-group leetcode/editor/cn/25-reverse-nodes-in-k-group.cpp)
+add_executable(000-reverse-linked-list-template-00 leetcode/editor/cn/000-reverse-linked-list-template-00.cpp)

@@ -43,6 +43,11 @@ namespace LeetCode {
             insert(it);
     }
 
+    List::List(std::vector<int> l) {
+        for (auto it : l)
+            insert(it);
+    }
+
     List::~List() {
         ListNode *del_p = nullptr;
         while (head != nullptr) {

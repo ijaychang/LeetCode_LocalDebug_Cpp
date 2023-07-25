@@ -43,6 +43,8 @@ namespace LeetCode {
 
         List(std::initializer_list<int> l);
 
+        List(std::vector<int> l);
+
         ~List();
 
         void insert(int x);
