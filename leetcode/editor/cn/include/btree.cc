@@ -16,6 +16,7 @@
 
 namespace LeetCode {
     const int NULL_VAL = -1;
+
     /**
      * 先序遍历打印树的节点值
      *
@@ -63,6 +64,16 @@ namespace LeetCode {
     Tree::Tree(std::initializer_list<int> il) : q(il) {
         if (q.empty())
             return;
+        root = deserialize(q);
+    }
+
+    Tree::Tree(std::vector<int> l)  {
+        for (int i = 0 ; i < l.size() ; i ++) {
+            q.push(l[i]);
+        }
+        if (q.empty()) {
+            return;
+        }
         root = deserialize(q);
     }
 

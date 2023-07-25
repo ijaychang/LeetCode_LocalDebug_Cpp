@@ -44,6 +44,8 @@ namespace LeetCode {
     public:
         Tree(std::initializer_list<int> il);
 
+        Tree(std::vector<int> l);
+
         ~Tree();
 
         void print();

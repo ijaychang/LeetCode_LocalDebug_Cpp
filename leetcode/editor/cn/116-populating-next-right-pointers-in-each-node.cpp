@@ -86,7 +86,8 @@ struct Node {
 
 class Solution {
 public:
-    // 方法二 迭代法
+
+    // 方法一 遍历法[BFS]
     Node *connect(Node *root) {
         if (!root) {
             return nullptr;
@@ -113,6 +114,25 @@ public:
             pre = nullptr;
         }
         return root;
+    }
+
+    // 方法二 遍历法[DFS]
+    Node *connect(Node *root) {
+        if (!root) {
+            return nullptr;
+        }
+        traverse(root->left, root->right);
+        return root;
+    }
+
+    void traverse(Node *node1, Node *node2) {
+        if (!node1 || !node2) {
+            return;
+        }
+        node1->next = node2;
+        traverse(node1->left, node1->right);
+        traverse(node1->right, node2->left);
+        traverse(node2->left, node2->right);
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)

@@ -62,25 +62,51 @@ using namespace std;
  */
 class Solution {
 public:
-    void flatten(TreeNode *root) {
-        vector<TreeNode *> track;
-        traverse(root, track);
-        TreeNode *p = root;
-        for (int i = 1; i < track.size(); i++) {
-            p->left = nullptr;
-            p->right = track[i];
-            p = p->right;
-        }
-    }
+    // 方法一 遍历法
+//    void flatten(TreeNode *root) {
+//        vector<TreeNode *> track;
+//        traverse(root, track);
+//        TreeNode *p = root;
+//        for (int i = 1; i < track.size(); i++) {
+//            p->left = nullptr;
+//            p->right = track[i];
+//            p = p->right;
+//        }
+//    }
+//
+//    void traverse(TreeNode *root, vector<TreeNode *> &track) {
+//        if (!root) {
+//            return;
+//        }
+//        track.push_back(root);
+//        traverse(root->left, track);
+//        traverse(root->right, track);
+//    }
 
-    void traverse(TreeNode *root, vector<TreeNode *> &track) {
+    // 方法二 分解问题
+    void flatten(TreeNode *root) {
         if (!root) {
             return;
         }
-        track.push_back(root);
-        traverse(root->left, track);
-        traverse(root->right, track);
+        // 先序遍历代码位置
+        TreeNode *left = root->left;
+        TreeNode *right = root->right;
+        // 拉平左子树
+        flatten(root->left);
+        // 拉平右子树
+        flatten(root->right);
+        // 后序遍历代码位置
+        root->left = nullptr;
+        // 左子树作为root的右子树
+        root->right = left;
+        TreeNode *p = root;
+        while (p->right != nullptr) {
+            p = p->right;
+        }
+        p->right = right;
     }
+
+
 };
 //leetcode submit region end(Prohibit modification and deletion)
 

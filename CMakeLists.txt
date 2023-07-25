@@ -38,3 +38,8 @@ add_executable(129-sum-root-to-leaf-numbers leetcode/editor/cn/129-sum-root-to-l
 add_executable(124-binary-tree-maximum-path-sum leetcode/editor/cn/124-binary-tree-maximum-path-sum.cpp)
 add_executable(108-convert-sorted-array-to-binary-search-tree leetcode/editor/cn/108-convert-sorted-array-to-binary-search-tree.cpp)
 add_executable(110-balanced-binary-tree leetcode/editor/cn/110-balanced-binary-tree.cpp)
+add_executable(1110-delete-nodes-and-return-forest leetcode/editor/cn/1110-delete-nodes-and-return-forest.cpp)
+add_executable(1261-find-elements-in-a-contaminated-binary-tree leetcode/editor/cn/1261-find-elements-in-a-contaminated-binary-tree.cpp)
+add_executable(1315-sum-of-nodes-with-even-valued-grandparent leetcode/editor/cn/1315-sum-of-nodes-with-even-valued-grandparent.cpp)
+add_executable(1325-delete-leaves-with-a-given-value leetcode/editor/cn/1325-delete-leaves-with-a-given-value.cpp)
+add_executable(226-invert-binary-tree leetcode/editor/cn/226-invert-binary-tree.cpp)
