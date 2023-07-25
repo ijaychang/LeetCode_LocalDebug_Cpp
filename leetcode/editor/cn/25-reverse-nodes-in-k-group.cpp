@@ -100,7 +100,9 @@ public:
             b = b->next;
         }
 
+        // 反转从a至b(不含b)的链表
         ListNode *newHead = reverse(a,b);
+        // 原来的a现在应该就是尾巴了，所以可以用a->next指向
         a->next = reverseKGroup(b,k);
         return newHead;
     }
