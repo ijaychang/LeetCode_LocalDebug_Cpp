@@ -123,6 +123,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/106-construct-binary-tree-from-inorder-and-postorder-traversal.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/106-construct-binary-tree-from-inorder-and-postorder-traversal.cpp" />
+              <option name="questionId" value="106" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/108-convert-sorted-array-to-binary-search-tree.cpp">
           <value>
             <LeetcodeEditor>
@@ -331,6 +339,22 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/2769-find-the-maximum-achievable-number.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/2769-find-the-maximum-achievable-number.cpp" />
+              <option name="questionId" value="2812" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/2770-maximum-number-of-jumps-to-reach-the-last-index.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/2770-maximum-number-of-jumps-to-reach-the-last-index.cpp" />
+              <option name="questionId" value="2855" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/300-longest-increasing-subsequence.cpp">
           <value>
             <LeetcodeEditor>
@@ -432,6 +456,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/543-diameter-of-binary-tree.cpp" />
               <option name="questionId" value="543" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/654-maximum-binary-tree.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/654-maximum-binary-tree.cpp" />
+              <option name="questionId" value="654" />
             </LeetcodeEditor>
           </value>
         </entry>

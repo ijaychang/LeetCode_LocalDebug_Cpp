@@ -45,3 +45,6 @@ add_executable(1325-delete-leaves-with-a-given-value leetcode/editor/cn/1325-del
 add_executable(226-invert-binary-tree leetcode/editor/cn/226-invert-binary-tree.cpp)
 add_executable(25-reverse-nodes-in-k-group leetcode/editor/cn/25-reverse-nodes-in-k-group.cpp)
 add_executable(000-reverse-linked-list-template-00 leetcode/editor/cn/000-reverse-linked-list-template-00.cpp)
+add_executable(2770-maximum-number-of-jumps-to-reach-the-last-index leetcode/editor/cn/2770-maximum-number-of-jumps-to-reach-the-last-index.cpp)
+add_executable(654-maximum-binary-tree leetcode/editor/cn/654-maximum-binary-tree.cpp)
+add_executable(106-construct-binary-tree-from-inorder-and-postorder-traversal leetcode/editor/cn/106-construct-binary-tree-from-inorder-and-postorder-traversal.cpp)
