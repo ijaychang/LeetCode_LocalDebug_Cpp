@@ -56,3 +56,6 @@ add_executable(21-merge-two-sorted-lists leetcode/editor/cn/21-merge-two-sorted-
 add_executable(000-merge-sort leetcode/editor/cn/000-merge-sort.cpp)
 add_executable(912-sort-an-array leetcode/editor/cn/912-sort-an-array.cpp)
 add_executable(88-merge-sorted-array leetcode/editor/cn/88-merge-sorted-array.cpp)
+add_executable(Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof leetcode/editor/cn/Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof.cpp)
+add_executable(Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof-2 leetcode/editor/cn/Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof-2.cpp)
+add_executable(315-count-of-smaller-numbers-after-self leetcode/editor/cn/315-count-of-smaller-numbers-after-self.cpp)

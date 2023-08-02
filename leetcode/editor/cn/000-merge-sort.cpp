@@ -2,15 +2,18 @@
 
 using namespace std;
 
+
 class Solution {
 public:
 
     int *tmp;
 
-    void sort(int nums[]) {
-        // 在 C++ 中，没有获取数组长度的函数，要数组数组的长度，我们可以使用 sizeof 首先获取整个数组的占用字节大小，
-        // 再次使用 sizeof 获取单个元素的内存大小，最后相除得到数组长度
-        int n = sizeof(nums) / sizeof(nums[0]);
+    /**
+     *
+     * @param nums 数组
+     * @param n 数组长度
+     */
+    void sort(int nums[], int n) {
         tmp = new int[n];
         doSort(nums, 0, n - 1);
     }
@@ -55,11 +58,18 @@ public:
 //leetcode submit region end(Prohibit modification and deletion)
 
 
+
+template<class T>
+
+int length(T &arr) {
+    return sizeof(arr) / sizeof(arr[0]);
+}
+
 int main() {
     Solution s;
 
-    int nums[] = {11, 9, 22, 12, 1, 3, 5, 7, 2, 4, 6, 8, 10};
-    s.sort(nums);
+    int nums[] = {11, 9, 22, 12, 1, 3, 5, 7, 2, 4, 6, 13, 8, 10};
+    s.sort(nums, length(nums));
     for (auto n : nums) {
         cout << n << endl;
     }
