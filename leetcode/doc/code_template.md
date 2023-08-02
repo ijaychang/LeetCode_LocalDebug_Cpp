@@ -21,7 +21,7 @@
 ```
 
 # 根据中序遍历序列后续遍历序列构建二叉树
-![reverse_linked_list](construct-bitree-from-inorder-postorder.jpeg)
+![construct-bitree-from-inorder-postorder](construct-bitree-from-inorder-postorder.jpeg)
 ```c++
 class Solution {
 public:
@@ -59,4 +59,21 @@ public:
 
     }
 };
+```
+
+
+# 根据前序遍历序列，后续遍历序列构建二叉树
+
+1、首先把前序遍历结果的第一个元素或者后序遍历结果的最后一个元素确定为根节点的值。
+
+2、然后把前序遍历结果的第二个元素作为左子树的根节点的值。
+
+3、在后序遍历结果中寻找左子树根节点的值，从而确定了左子树的索引边界，进而确定右子树的索引边界，递归构造左右子树即可。
+
+
+
+![construct-bitree-from-inorder-postorder](construct-bitree-from-inorder-postorder.jpeg)
+
+
+```c++
 ```
