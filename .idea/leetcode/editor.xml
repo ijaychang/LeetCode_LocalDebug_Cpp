@@ -379,6 +379,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/303-range-sum-query-immutable.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/303-range-sum-query-immutable.cpp" />
+              <option name="questionId" value="303" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/307-range-sum-query-mutable.cpp">
           <value>
             <LeetcodeEditor>
@@ -408,6 +416,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/322-coin-change.cpp" />
               <option name="questionId" value="322" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/327-count-of-range-sum.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/327-count-of-range-sum.cpp" />
+              <option name="questionId" value="327" />
             </LeetcodeEditor>
           </value>
         </entry>

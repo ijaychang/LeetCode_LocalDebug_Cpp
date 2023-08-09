@@ -59,3 +59,7 @@ add_executable(88-merge-sorted-array leetcode/editor/cn/88-merge-sorted-array.cp
 add_executable(Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof leetcode/editor/cn/Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof.cpp)
 add_executable(Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof-2 leetcode/editor/cn/Offer-51-shu-zu-zhong-de-ni-xu-dui-lcof-2.cpp)
 add_executable(315-count-of-smaller-numbers-after-self leetcode/editor/cn/315-count-of-smaller-numbers-after-self.cpp)
+add_executable(315-count-of-smaller-numbers-after-self-2 leetcode/editor/cn/315-count-of-smaller-numbers-after-self-2.cpp)
+add_executable(315-count-of-smaller-numbers-after-self-3 leetcode/editor/cn/315-count-of-smaller-numbers-after-self-3.cpp)
+add_executable(327-count-of-range-sum leetcode/editor/cn/327-count-of-range-sum.cpp)
+add_executable(303-range-sum-query-immutable leetcode/editor/cn/303-range-sum-query-immutable.cpp)
