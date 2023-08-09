@@ -52,12 +52,9 @@ public:
     vector<int> countSmaller(vector<int> &nums) {
         // 初始化tmp
         int sz = nums.size();
-        // vector<int> tmp(nums.begin(), nums.end());
-        // vector<int> indexes(sz,0);
-        // vector<int> tmp_index(sz,0);
-        int *tmp = new int[sz];
-        int *indexes = new int[sz];
-        int *tmp_indexes = new int[sz];
+        vector<int> tmp(nums.begin(), nums.end());
+        vector<int> indexes(sz, 0);
+        vector<int> tmp_indexes(sz, 0);
         vector<int> res(sz, 0);
         for (int i = 0; i < sz; i++) {
             indexes[i] = i;
@@ -67,9 +64,9 @@ public:
         mergeSort(nums, 0, sz - 1, tmp, indexes, tmp_indexes, res);
         return res;
     }
-    // 算法正确但超时了
+
     void
-    mergeSort(vector<int> &nums, int low, int high, int *tmp, int* indexes, int* tmp_indexes,
+    mergeSort(vector<int> &nums, int low, int high, vector<int> &tmp, vector<int> &indexes, vector<int> &tmp_indexes,
               vector<int> &res) {
         if (low >= high) {
             return;
@@ -87,26 +84,25 @@ public:
 
         // 数组双指针技巧，合并两个有序数组
         int p1 = low, p2 = mid + 1, p = low;
-        for (; p1 <= mid || p2 <= high;) {
-            if (p1 > mid) {
-                indexes[p] = tmp_indexes[p2];
-                nums[p++] = tmp[p2++];
-            } else if (p2 > high) {
+        for (; p1 <= mid && p2 <= high;) {
+            if (tmp[p1] <= tmp[p2]) {
+                res[tmp_indexes[p1]] = res[tmp_indexes[p1]] + p2 - mid - 1;
                 indexes[p] = tmp_indexes[p1];
                 nums[p++] = tmp[p1++];
-            } else if (tmp[p1] <= tmp[p2]) {
-                indexes[p] = tmp_indexes[p1];
-                nums[p++] = tmp[p1++];
-            } else {
-                // 这句是关键，就是说 p1 指向左侧数组的元素值大于 p2 指向的右侧数组元素时，那么此时 p1 的右边元素[在左侧数组] 也肯定是大于 p2所指向的元素值的
-                for (int i = p1; i <= mid; i++) {
-                    // cout << tmp[i] << "->" << tmp[p2] << endl;
-                    res[tmp_indexes[i]] = res[tmp_indexes[i]] + 1;
-                    // cout << "indexes[i]=" << indexes[i] << ",res[indexes[i]]=" << res[indexes[i]] << endl;
-                }
+            } else if (tmp[p1] > tmp[p2]) {
                 indexes[p] = tmp_indexes[p2];
                 nums[p++] = tmp[p2++];
             }
+        }
+
+        for (; p1 <= mid;) {
+            res[tmp_indexes[p1]] = res[tmp_indexes[p1]] + high - mid;
+            indexes[p] = tmp_indexes[p1];
+            nums[p++] = tmp[p1++];
+        }
+        for (; p2 <= high;) {
+            indexes[p] = tmp_indexes[p2];
+            nums[p++] = tmp[p2++];
         }
     }
 };
@@ -115,7 +111,8 @@ public:
 
 int main() {
     Solution s;
-    vector<int> nums{1,9,7,5,8};
+    vector<int> nums{-1,-1};
+    // vector<int> nums{9, 9, 8, 8, 7};
     vector<int> res = s.countSmaller(nums);
     cout << "###################################" << endl;
     for (int i = 0; i < res.size(); i++) {
