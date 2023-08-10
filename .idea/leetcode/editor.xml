@@ -387,6 +387,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/304-range-sum-query-2d-immutable.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/304-range-sum-query-2d-immutable.cpp" />
+              <option name="questionId" value="304" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/307-range-sum-query-mutable.cpp">
           <value>
             <LeetcodeEditor>

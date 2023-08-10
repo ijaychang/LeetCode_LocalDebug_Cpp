@@ -41,44 +41,31 @@ using namespace std;
 class Solution {
 public:
     int res = 0;
+    int *preSum;
+
 
     int countRangeSum(vector<int> &nums, int lower, int upper) {
-        int sum = mergeSort(nums, 0, nums.size() - 1, lower, upper);
-        if (sum >= lower && sum <= upper) {
-            cout << sum << endl;
-            res++;
+        preSum[0] = nums[0];
+        for (int i = 1; i < nums.size(); i++) {
+            preSum[i] = preSum[i - 1] + nums[i];
         }
+        vector<int> count(nums.size(), 0);
+        mergeSort(nums, 0, nums.size() - 1, lower, upper, count);
         return res;
     }
 
-    int mergeSort(vector<int> &nums, int low, int high, int lower, int upper) {
+    void mergeSort(vector<int> &nums, int low, int high, int lower, int upper, vector<int> &count) {
         if (low >= high) {
-            return nums[low];
+            return;
         }
 
         int mid = (low + high) / 2;
-        int leftSum = mergeSort(nums, low, mid, lower, upper);
-        int rightSum = mergeSort(nums, mid + 1, high, lower, upper);
+        mergeSort(nums, low, mid, lower, upper);
+        mergeSort(nums, mid + 1, high, lower, upper);
 
-        // 还要考虑一个问题，就是左侧数组的最后一个元素，与右侧数组的第一个元素的和
-        // 且左数组，右数组均大于1个数
-        if (mid - low > 0 && high - mid - 1 > 0) {
-            if (nums[mid] == INT32_MIN)
-            int sumBoundary = nums[mid] + nums[mid + 1];
-            if (sumBoundary >= lower && sumBoundary <= upper) {
-                cout << sumBoundary << endl;
-                res++;
-            }
+        for (int j = low + 1; j <= high; j++) {
+            preSum[j] - nums[j - 1]
         }
-        if (leftSum >= lower && leftSum <= upper) {
-            cout << leftSum << endl;
-            res++;
-        }
-        if (rightSum >= lower && rightSum <= upper) {
-            cout << rightSum << endl;
-            res++;
-        }
-        return leftSum + rightSum;
     }
 };
 //leetcode submit region end(Prohibit modification and deletion)

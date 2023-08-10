@@ -63,3 +63,4 @@ add_executable(315-count-of-smaller-numbers-after-self-2 leetcode/editor/cn/315-
 add_executable(315-count-of-smaller-numbers-after-self-3 leetcode/editor/cn/315-count-of-smaller-numbers-after-self-3.cpp)
 add_executable(327-count-of-range-sum leetcode/editor/cn/327-count-of-range-sum.cpp)
 add_executable(303-range-sum-query-immutable leetcode/editor/cn/303-range-sum-query-immutable.cpp)
+add_executable(304-range-sum-query-2d-immutable leetcode/editor/cn/304-range-sum-query-2d-immutable.cpp)
