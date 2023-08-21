@@ -139,11 +139,27 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/1094-car-pooling.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/1094-car-pooling.cpp" />
+              <option name="questionId" value="1184" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/110-balanced-binary-tree.cpp">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/110-balanced-binary-tree.cpp" />
               <option name="questionId" value="110" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/1109-corporate-flight-bookings.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/1109-corporate-flight-bookings.cpp" />
+              <option name="questionId" value="1206" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -544,6 +560,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/752-open-the-lock.cpp" />
               <option name="questionId" value="753" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/86-partition-list.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/86-partition-list.cpp" />
+              <option name="questionId" value="86" />
             </LeetcodeEditor>
           </value>
         </entry>
