@@ -23,8 +23,11 @@ public:
             return;
         }
         int mid = (high + low) / 2;
+        // 将左侧的数组排好序
         doSort(nums, low, mid);
+        // 将右侧的数组排好序
         doSort(nums, mid + 1, high);
+        // 将左右侧数组合并
         merge(nums, low, mid, high);
     }
 
