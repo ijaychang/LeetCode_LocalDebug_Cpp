@@ -467,6 +467,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/341-flatten-nested-list-iterator.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/341-flatten-nested-list-iterator.cpp" />
+              <option name="questionId" value="341" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/371-sum-of-two-integers.cpp">
           <value>
             <LeetcodeEditor>
@@ -488,6 +496,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/394-decode-string.cpp" />
               <option name="questionId" value="394" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/424-longest-repeating-character-replacement.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/424-longest-repeating-character-replacement.cpp" />
+              <option name="questionId" value="424" />
             </LeetcodeEditor>
           </value>
         </entry>
