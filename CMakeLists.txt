@@ -75,3 +75,4 @@ add_executable(341-flatten-nested-list-iterator leetcode/editor/cn/341-flatten-n
 add_executable(222-count-complete-tree-nodes leetcode/editor/cn/222-count-complete-tree-nodes.cpp)
 add_executable(235-lowest-common-ancestor-of-a-binary-search-tree leetcode/editor/cn/235-lowest-common-ancestor-of-a-binary-search-tree.cpp)
 add_executable(236-lowest-common-ancestor-of-a-binary-tree leetcode/editor/cn/236-lowest-common-ancestor-of-a-binary-tree.cpp)
+add_executable(23-merge-k-sorted-lists leetcode/editor/cn/23-merge-k-sorted-lists.cpp)
