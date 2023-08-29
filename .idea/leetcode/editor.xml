@@ -339,6 +339,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/222-count-complete-tree-nodes.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/222-count-complete-tree-nodes.cpp" />
+              <option name="questionId" value="222" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/226-invert-binary-tree.cpp">
           <value>
             <LeetcodeEditor>
@@ -352,6 +360,22 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/230-kth-smallest-element-in-a-bst.cpp" />
               <option name="questionId" value="230" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/235-lowest-common-ancestor-of-a-binary-search-tree.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/235-lowest-common-ancestor-of-a-binary-search-tree.cpp" />
+              <option name="questionId" value="235" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/236-lowest-common-ancestor-of-a-binary-tree.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/236-lowest-common-ancestor-of-a-binary-tree.cpp" />
+              <option name="questionId" value="236" />
             </LeetcodeEditor>
           </value>
         </entry>
