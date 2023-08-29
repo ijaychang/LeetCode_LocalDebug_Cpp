@@ -103,52 +103,81 @@ using namespace std;
 //};
 
 // 方法二
+//class Solution {
+//public:
+//    ListNode *mergeKLists(vector<ListNode *> &lists) {
+//        if (lists.empty()) {
+//            return nullptr;
+//        }
+//        return merge(lists, 0, lists.size() - 1);
+//    }
+//
+//    ListNode *merge(vector<ListNode *> &lists, int low, int high) {
+//        if (low > high) {
+//            return nullptr;
+//        }
+//        if (high == low) {
+//            return lists[low];
+//        }
+//        int mid = ((high - low) >> 1) + low;
+//        ListNode *left = merge(lists, low, mid);
+//        ListNode *right = merge(lists, mid + 1, high);
+//        return mergeTwoList(left, right);
+//    }
+//
+//    ListNode *mergeTwoList(ListNode *list1, ListNode *list2) {
+//        if ((!list1) || (!list2)) {
+//            return list1 ? list1 : list2;
+//        }
+//        ListNode *p, *dummy = new ListNode(-1), *p1 = list1, *p2 = list2;
+//        p = dummy;
+//        for (; p1 != nullptr && p2 != nullptr;) {
+//            if (p1->val <= p2->val) {
+//                p->next = p1;
+//                p1 = p1->next;
+//            } else {
+//                p->next = p2;
+//                p2 = p2->next;
+//            }
+//            p = p->next;
+//        }
+//        if (p1 != nullptr) {
+//            p->next = p1;
+//        }
+//        if (p2 != nullptr) {
+//            p->next = p2;
+//        }
+//        return dummy->next;
+//    }
+//};
+
+// 方法三 (优先级队列)
+
 class Solution {
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {
-        if (lists.empty()) {
-            return nullptr;
-        }
-        return merge(lists, 0, lists.size() - 1);
-    }
+        auto cmp = [](ListNode* a,ListNode* b) {
+            return a->val > b->val;
+        };
+        priority_queue<ListNode*,vector<ListNode*>, decltype(cmp)> q(cmp);
 
-    ListNode *merge(vector<ListNode *> &lists, int low, int high) {
-        if (low > high) {
-            return nullptr;
-        }
-        if (high == low) {
-            return lists[low];
-        }
-        int mid = ((high - low) >> 1) + low;
-        ListNode *left = merge(lists, low, mid);
-        ListNode *right = merge(lists, mid + 1, high);
-        return mergeTwoList(left, right);
-    }
-
-    ListNode *mergeTwoList(ListNode *list1, ListNode *list2) {
-        if ((!list1) || (!list2)) {
-            return list1 ? list1 : list2;
-        }
-        ListNode *p, *dummy = new ListNode(-1), *p1 = list1, *p2 = list2;
-        p = dummy;
-        for (; p1 != nullptr && p2 != nullptr;) {
-            if (p1->val <= p2->val) {
-                p->next = p1;
-                p1 = p1->next;
-            } else {
-                p->next = p2;
-                p2 = p2->next;
+        ListNode *p;
+        for (int i = 0 ; i < lists.size() ;i ++) {
+            for(p = lists[i]; p != nullptr; p = p->next) {
+                q.push(p);
             }
+        }
+        ListNode *dummy = new ListNode(-1);
+        p = dummy;
+        for (;!q.empty();) {
+            p->next = q.top();
+            q.pop();
             p = p->next;
         }
-        if (p1 != nullptr) {
-            p->next = p1;
-        }
-        if (p2 != nullptr) {
-            p->next = p2;
-        }
+        p->next = nullptr;
         return dummy->next;
     }
+
 };
 //leetcode submit region end(Prohibit modification and deletion)
 
