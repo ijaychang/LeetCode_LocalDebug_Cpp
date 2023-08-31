@@ -153,25 +153,59 @@ using namespace std;
 
 // 方法三 (优先级队列)
 
+//class Solution {
+//public:
+//    ListNode *mergeKLists(vector<ListNode *> &lists) {
+//        auto cmp = [](ListNode* a,ListNode* b) {
+//            return a->val > b->val;
+//        };
+//        priority_queue<ListNode*,vector<ListNode*>, decltype(cmp)> q(cmp);
+//
+//        ListNode *p;
+//        for (int i = 0 ; i < lists.size() ;i ++) {
+//            for(p = lists[i]; p != nullptr; p = p->next) {
+//                q.push(p);
+//            }
+//        }
+//        ListNode *dummy = new ListNode(-1);
+//        p = dummy;
+//        for (;!q.empty();) {
+//            p->next = q.top();
+//            q.pop();
+//            p = p->next;
+//        }
+//        p->next = nullptr;
+//        return dummy->next;
+//    }
+//
+//};
+
+// 方法四 优先级队列优化版
 class Solution {
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {
-        auto cmp = [](ListNode* a,ListNode* b) {
+        auto cmp = [](ListNode *a, ListNode *b) {
             return a->val > b->val;
         };
-        priority_queue<ListNode*,vector<ListNode*>, decltype(cmp)> q(cmp);
-
-        ListNode *p;
-        for (int i = 0 ; i < lists.size() ;i ++) {
-            for(p = lists[i]; p != nullptr; p = p->next) {
-                q.push(p);
+        priority_queue<ListNode *, vector<ListNode *>, decltype(cmp)> pq(cmp);
+        // 先将每个链表的头结点放到 pq
+        for (int i = 0; i < lists.size(); i++) {
+            if (lists[i] != nullptr) {
+                pq.push(lists[i]);
             }
         }
+
         ListNode *dummy = new ListNode(-1);
-        p = dummy;
-        for (;!q.empty();) {
-            p->next = q.top();
-            q.pop();
+        ListNode *p = dummy;
+
+        for (; !pq.empty();) {
+            ListNode *node = pq.top();
+            pq.pop();
+            p->next = node;
+
+            if (node->next != nullptr) {
+                pq.push(node->next);
+            }
             p = p->next;
         }
         p->next = nullptr;
@@ -185,19 +219,19 @@ public:
 int main() {
     // [],[-1,5,11],[],[6,10]
     Solution s;
-    vector<int> v1{};
-    vector<int> v2{-1, 5, 11};
-    vector<int> v3{};
-    vector<int> v4{6, 10};
+    vector<int> v1{1,4,5};
+    vector<int> v2{1, 3, 4};
+    vector<int> v3{2,6};
+//    vector<int> v4{6, 10};
     List *list1 = new List(v1);
     List *list2 = new List(v2);
     List *list3 = new List(v3);
-    List *list4 = new List(v4);
+//    List *list4 = new List(v4);
     vector<ListNode *> list;
     list.push_back(list1->head);
     list.push_back(list2->head);
     list.push_back(list3->head);
-    list.push_back(list4->head);
+//    list.push_back(list4->head);
     ListNode *res = s.mergeKLists(list);
     print_list(res);
 }

@@ -155,6 +155,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/1104-path-in-zigzag-labelled-binary-tree.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/1104-path-in-zigzag-labelled-binary-tree.cpp" />
+              <option name="questionId" value="1194" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/1109-corporate-flight-bookings.cpp">
           <value>
             <LeetcodeEditor>
@@ -275,6 +283,22 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/141-linked-list-cycle.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/141-linked-list-cycle.cpp" />
+              <option name="questionId" value="141" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/142-linked-list-cycle-ii.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/142-linked-list-cycle-ii.cpp" />
+              <option name="questionId" value="142" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/144-binary-tree-preorder-traversal.cpp">
           <value>
             <LeetcodeEditor>
@@ -315,11 +339,27 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/19-remove-nth-node-from-end-of-list.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/19-remove-nth-node-from-end-of-list.cpp" />
+              <option name="questionId" value="19" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/190-reverse-bits.cpp">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/190-reverse-bits.cpp" />
               <option name="questionId" value="190" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/202-happy-number.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/202-happy-number.cpp" />
+              <option name="questionId" value="202" />
             </LeetcodeEditor>
           </value>
         </entry>
@@ -627,6 +667,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/876-middle-of-the-linked-list.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/876-middle-of-the-linked-list.cpp" />
+              <option name="questionId" value="908" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/leetcode/editor/cn/88-merge-sorted-array.cpp">
           <value>
             <LeetcodeEditor>
@@ -680,6 +728,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/leetcode/editor/cn/94-binary-tree-inorder-traversal.cpp" />
               <option name="questionId" value="94" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/leetcode/editor/cn/剑指 Offer 22-lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof.cpp">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/leetcode/editor/cn/剑指 Offer 22-lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof.cpp" />
+              <option name="questionId" value="100294" />
             </LeetcodeEditor>
           </value>
         </entry>
