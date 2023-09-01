@@ -82,3 +82,7 @@ add_executable(876-middle-of-the-linked-list leetcode/editor/cn/876-middle-of-th
 add_executable(Offer-22-lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof "leetcode/editor/cn/Offer-22-lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof.cpp")
 add_executable(142-linked-list-cycle-ii leetcode/editor/cn/142-linked-list-cycle-ii.cpp)
 add_executable(202-happy-number leetcode/editor/cn/202-happy-number.cpp)
+add_executable(160-intersection-of-two-linked-lists leetcode/editor/cn/160-intersection-of-two-linked-lists.cpp)
+add_executable(92-reverse-linked-list-ii leetcode/editor/cn/92-reverse-linked-list-ii.cpp)
+add_executable(66-plus-one leetcode/editor/cn/66-plus-one.cpp)
+add_executable(67-add-binary leetcode/editor/cn/67-add-binary.cpp)

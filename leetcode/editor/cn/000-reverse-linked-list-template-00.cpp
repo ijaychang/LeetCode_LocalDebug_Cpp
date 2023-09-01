@@ -47,22 +47,23 @@ public:
 //        return pre;
 //    }
 
-// 精简版
-    ListNode *reverse(ListNode *head) {
-        if (!head) {
-            return nullptr;
+    // 精简版
+    // 三指针技巧反转链表
+    ListNode* reverse(ListNode* head) {
+        // 初始 cur 指向头节点，prev 为 nullptr，next 为 nullptr
+        ListNode *cur = head,*prev = nullptr,*next = nullptr;
+        for (;cur != nullptr;) {
+            // 令 next 指向 cur 的后一个节点
+            next = cur->next;
+            // cur->next 指针指向 prev
+            cur->next = prev;
+            // prev 用于记录之前的 cur 所指向的节点
+            prev = cur;
+            // 将 cur 移动到下一个节点
+            cur = next;
         }
-        ListNode *pre = nullptr, *cur = head, *nxt = nullptr;
-        for (cur = head; cur != nullptr;) {
-            // nxt用于暂时保存cur->next
-            nxt = cur->next;
-            // 逐个节点反转
-            cur->next = pre;
-            // pre用于记录上次操作的节点
-            pre = cur;
-            cur = nxt;
-        }
-        return pre;
+        // prev 为原链表的最后一个节点
+        return prev;
     }
 
 };
